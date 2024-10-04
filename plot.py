@@ -20,13 +20,13 @@ smoothed_y_99 = [item[5] for item in data]
 
 # Scatter plot of the different values
 plt.figure(figsize=(10, 6))
-
-plt.scatter(range(len(original_y)), original_y, color='blue', label='Original Y', alpha=0.6, marker='o', s=200)
-plt.scatter(range(len(interpolated_y)), interpolated_y, color='red', label='Interpolated Y', alpha=0.6, marker='s', s=80)
-plt.scatter(range(len(smoothed_y_0)), smoothed_y_0, color='green', label='Smoothed p=0', alpha=0.6, marker='^', s=100)
-plt.scatter(range(len(smoothed_y_4)), smoothed_y_4, color='orange', label='Smoothed p=0.4', alpha=0.6, marker='v', s=120)
-plt.scatter(range(len(smoothed_y_8)), smoothed_y_8, color='purple', label='Smoothed p=0.8', alpha=0.6, marker='x', s=140)
-plt.scatter(range(len(smoothed_y_99)), smoothed_y_99, color='brown', label='Smoothed p=0.99', alpha=0.6, marker='D', s=80)
+size = 35
+plt.scatter(range(len(original_y)), original_y, color='green', label='Original Y', alpha=0.9, marker='o', s=size+20)
+plt.scatter(range(len(interpolated_y)), interpolated_y, color='orange', label='Interpolated Y', alpha=0.9, marker='x', s=size)
+plt.scatter(range(len(smoothed_y_0)), smoothed_y_0, color='black', label='Smoothed p=0', alpha=0.7, marker='+', s=size+40)
+plt.scatter(range(len(smoothed_y_4)), smoothed_y_4, color='red', label='Smoothed p=0.4', alpha=0.7, marker='^', s=size)
+plt.scatter(range(len(smoothed_y_8)), smoothed_y_8, color='darkblue', label='Smoothed p=0.8', alpha=0.7, marker='D', s=size)
+plt.scatter(range(len(smoothed_y_99)), smoothed_y_99, color='brown', label='Smoothed p=0.99', alpha=0.7, marker='8', s=size)
 
 # Add labels and title
 plt.title('Comparison of Original, Interpolated, and Smoothed Values')
